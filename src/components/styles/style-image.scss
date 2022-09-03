@@ -1,0 +1,14 @@
+@import url('./../fonts/font-face.css');
+
+
+body{
+    font-family: 'Vazir';
+}
+
+.imageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(100,100,5);
+    padding: 10px;
+}
