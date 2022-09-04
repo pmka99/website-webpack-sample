@@ -3,6 +3,9 @@ const MiniCssExtractPlugin=require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const loader = require('sass-loader');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack=require('webpack')
+const notifier = require('./webpack-plugins/Notifier');
+const Notifier = require('./webpack-plugins/Notifier');
 
 
 const config={
@@ -19,10 +22,13 @@ const config={
             chunks:'all'
         }
     },
+    stats:'errors-only',
     module: {
         rules:[]
     },
     plugins:[
+        new Notifier('mohamad karimi'),
+        new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             title : 'App',
             template : 'src/index.htm',
