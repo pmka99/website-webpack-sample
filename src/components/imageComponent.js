@@ -15,7 +15,7 @@ class ImageComponent{
 
     createTagText(){
         const p=document.createElement('p')
-        p.innerText="سلام راکت"
+        p.innerText="سلام دنیا"
         
         return p
     }
